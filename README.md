@@ -28,9 +28,6 @@
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-
 ### Links
 
 - Solution URL:[https://github.com/Harriet-ops/intro-component-with-signup-form-master]
