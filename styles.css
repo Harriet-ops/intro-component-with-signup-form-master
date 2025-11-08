@@ -15,12 +15,14 @@ body{
 
 main{
      display:flex;
+     position: relative;
+     top: 2rem;
   
 }
 
 form{
     width: 35vw;
-    height: 65vh;
+    height: fit-content;
     background-color: white;
     border-radius: 10px;
     display: flex;
@@ -49,9 +51,13 @@ p{
     line-height: 1.8rem;
     font-family: 'Poppins',sans-serif;
 }
+.input-group{
+    position: relative;
+}
 
 .firstName{
-    height: 10vh;
+    height: 8vh;
+    width: 100%;
     border-radius: 7px;
     border: 0.1px solid;
     border-color:hsl(0, 0%, 82%)  ;
@@ -67,7 +73,8 @@ input::placeholder{
 }
 
 .lastName{
-    height: 10vh;
+    height: 8vh;
+    width: 100%;
     border-radius: 7px;
     margin: 1.5rem 0rem 0rem 0rem;
     border: 0.1px solid;
@@ -76,7 +83,8 @@ input::placeholder{
 
 
 .e-address{
-    height: 10vh;
+    height: 8vh;
+    width: 100%;
     border-radius: 7px;
     margin: 1.5rem 0rem 0rem 0rem;
     border: 0.1px solid;
@@ -85,7 +93,8 @@ input::placeholder{
 
 
 .passcode{
-    height: 10vh;
+    height: 8vh;
+    width: 100%;
     border-radius: 7px;
     margin: 1.5rem 0rem 0rem 0rem;
     border: 0.1px solid;
@@ -120,40 +129,34 @@ span{
 
 .top-note{
     display: flex;
+    flex-direction: row;
     position: absolute;
-    top: 1rem;
-    /*right: 6.15rem; */
-    width: inherit;
-    height: 6vh;
+    right: -0.05rem;
+    top: -7rem;
+    width: 38.2vw;
+    height: fit-content;
     justify-content: center;
     color: white;
     background-color:hsl(248, 32%, 49%);
     border-radius: 10px;
-    padding: 1rem 0rem 0rem 0rem;
+    padding: 1.5rem;
     box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.1) ;   
     
       
 }
 
-.inputError {
+/* .inputError {
   border: 2px solid #ff7a7a;
   background: url('icon-error.svg') no-repeat right 1px center;
-  background-size: 20px;
-}
+  background-size: 1rem;
+} */
 
 .error{
+    position: relative;
     color: red;
     font-size: 0.5rem;
     margin-top:-4px;
     text-align: right;
 }
 
-UserInfo{
-    display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 25px; /* this creates breathing space for possible error text */
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
+  
