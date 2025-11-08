@@ -33,8 +33,8 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here]
-- Live Site URL: [Add live site URL here]
+- Solution URL:[https://github.com/Harriet-ops/intro-component-with-signup-form-master]
+- Live Site URL: [https://intro-component-with-signup-form-ma-omega.vercel.app/]
 ## My process
 
 ### Built with
