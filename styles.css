@@ -145,11 +145,11 @@ span{
       
 }
 
-/* .inputError {
+.inputError {
   border: 2px solid #ff7a7a;
   background: url('icon-error.svg') no-repeat right 1px center;
   background-size: 1rem;
-} */
+} 
 
 .error{
     position: relative;
@@ -159,4 +159,12 @@ span{
     text-align: right;
 }
 
-  
+ UserInfo{
+    /* display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px; */
+  border: 1px solid red;
+  border-radius: 6px;
+  font-size: 14px;
+ } 
