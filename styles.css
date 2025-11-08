@@ -147,7 +147,7 @@ span{
 
 .inputError {
   border: 2px solid #ff7a7a;
-  background: url('icon-error.svg') no-repeat right 1px center;
+  background: url('/images/icon-error.svg') no-repeat right 1rem center;
   background-size: 1rem;
 } 
 
