@@ -1,4 +1,4 @@
-document.getElementById('UserForm').addEventListener('submit',function(events){
+document.querySelector('.Claim').addEventListener('click',function(events){
     events.preventDefault();
 
 
@@ -29,29 +29,62 @@ function showError(UserInfo, message){
     errorMessage.textContent= message;
     UserInfo.insertAdjacentElement('afterend',errorMessage);
 }
+let hasErrors = false;
 
 if(first_Name.value.trim() ===''){
     showError(first_Name, 'First name cannot be empty')
-
+    hasErrors = true;
 }
 if(last_Name.value.trim() ===''){
     showError(last_Name,'Last Name cannot be empty')
+    hasErrors = true;
 }
 
 if (pass_word.value.trim() === ''){
     showError(pass_word,'Password cannot be empty');
-
+    hasErrors = true;
 }
  if (!isValidEmail(emailAddress.value)){
- showError(emailAddress,'Looks like this is not an email')
+   showError(emailAddress,'Looks like this is not an email')
+   hasErrors = true;
  }
+
 
 
 function isValidEmail(emailAddress) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(emailAddress.trim());
 }
+
+if(!hasErrors){
+    const payload = {
+        firstname: first_Name.value,
+        lastname: last_Name.value,
+        password: pass_word.value,
+        email: emailAddress.value
+    };
+    
+    console.log(payload);
+    
+    fetch('https://nonmitigatory-jaxon-martyrly.ngrok-free.dev/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
 })
+
+
 
 
 
